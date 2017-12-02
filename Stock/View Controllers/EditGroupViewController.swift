@@ -152,18 +152,6 @@ extension EditGroupViewController: UITableViewDataSource {
         
         return UITableViewCell()
     }
-    
-    //[C10-5]
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
-    }
-    
-    //[C10-5]
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 10))
-        view.backgroundColor = .clear
-        return view
-    }
 }
 
 extension EditGroupViewController: UITableViewDelegate {
@@ -181,6 +169,18 @@ extension EditGroupViewController: UITableViewDelegate {
             }))
             present(alert, animated: true, completion: nil)
         }
+    }
+    
+    //[C10-5]
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    //[C10-5]
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 10))
+        view.backgroundColor = .clear
+        return view
     }
 }
 

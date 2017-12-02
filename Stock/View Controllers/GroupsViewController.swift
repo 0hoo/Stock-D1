@@ -104,7 +104,6 @@ class GroupsViewController: UIViewController {
 
 //[C4-10]
 extension GroupsViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //[C4-11]
         //return 0
